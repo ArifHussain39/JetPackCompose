@@ -78,7 +78,7 @@ fun MessageCard() {
 //        Icon(Icons.Rounded.Favorite,
 //            contentDescription ="cart icon"
 //            )
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = {  }) {
             Text(text = "Click Me")
             
         }
