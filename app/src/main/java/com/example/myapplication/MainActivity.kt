@@ -36,6 +36,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.Red
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import java.security.AllPermission
@@ -51,11 +52,12 @@ class MainActivity : ComponentActivity() {
 }
 @Composable
 fun Button1() {
-      //  var col = rememberSaveable { mutableStateOf(Color.Red)}
+    var isGreen = rememberSaveable { mutableStateOf(false)}
+    val bgColor = if (isGreen.value) Color.Green else Color.Red
 
         Button(
-            onClick = { },
-            modifier = Modifier.background(Color.Red)
+            onClick = { isGreen.value = !isGreen.value },
+            modifier = Modifier.background(bgColor)
 
         ) {
             Text(text = "Change color")
