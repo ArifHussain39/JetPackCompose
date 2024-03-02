@@ -38,6 +38,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import java.security.AllPermission
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,8 +72,7 @@ fun ShowSwitch(){
 
     Switch(
         checked = isChecked.value ,
-        onCheckedChange = { isChecked.value = it },
-        modifier = Modifier.padding(70.dp)
+        onCheckedChange = { isChecked.value = it }
 
     )
 }
@@ -106,7 +106,9 @@ fun MyApp(){
         }
     ){
         Column(
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
            ShowSwitch()
             Button1()
