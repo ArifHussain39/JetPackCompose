@@ -89,9 +89,9 @@ fun MyApp(){
                                 fontSize = 30.sp
                             )
                         ){
-                            append("M")
+                            append("C")
                         }
-                        append("y ")
+                        append("ontact ")
                         withStyle(
                             style = SpanStyle(
                                 color= Color.Red,
@@ -99,9 +99,9 @@ fun MyApp(){
                                 fontSize = 30.sp
                             )
                         ){
-                            append("A")
+                            append("L")
                         }
-                        append("pp")
+                        append("ist")
                     }
                     Text(text = text)
                 },
